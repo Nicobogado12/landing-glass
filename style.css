@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+nav{
+    position: relative;
+    z-index: 99;
+    transition: 0.4s;
+}
+
+nav a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.container{
+    max-width: 1150px;
+    padding: 1em 2em;
+    margin: 0 auto;
+}
+
+nav .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul{
+list-style-type: none;
+padding: 0;
+display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+nav ul li a{
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+nav .container .menu-btn{
+    display: none;
+}
+
+.social-media a{
+    font-size: 1em;
+}
+
+.nav-link a{
+    font-weight: bold;
+}
+
+
+header{
+    height: 100vh;
+    background: url(img4.jpg)
+    center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1{
+    position: absolute;
+    font-size: clamp(3.5rem, 15vw + 1rem, 12rem);
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    transform:  translateY(-50%);
+}
+
+
+
+.glass{
+    position: absolute;
+    width: 42%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.h-glass{
+    background: url(img4.jpg)
+    center no-repeat fixed;
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+    top: 20px;
+    right: 0;
+    animation: text1 0.8s  ease-in forwards;
+}
+
+
+.h-regular{
+    color: #fff;
+    top: 30%;
+    left: 42%;
+    animation: text2 0.8s  ease-in forwards;
+    animation-delay: 500ms;
+}
+
+.glass > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1.5em;
+}
+
+.glass > div div{
+    margin: 0 1em;
+}
+
+.glass p{
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 27px;
+    max-width: 27em;
+}
+
+.glass h2{
+    color: #fff;
+}
+
+.glass a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.glass a i {
+    margin-left: 0.5em;
+}
+
+
+.glass .fa-route {
+    color: #ccc;
+    font-size: 2em;
+}
+
+section{
+    padding: 2em;
+    background: #f1f1f1;
+    color: #1f1f1f;
+    font-size: 1.1em;
+    line-height: 20px;
+    
+}
+
+section p {
+    max-width: 100%;
+    margin: 20px;
+}
+
+
+
+
+
+header h1{
+    opacity: 0;
+}
+
+
+@keyframes text1{
+
+    0%{
+        opacity: 0;
+        transform: translate(-2em, -50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 50%);
+    }
+}
+
+
+@keyframes text2{
+
+    0%{
+        opacity: 0;
+        transform: translate(-2em, 50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 50%);
+    }
+}
+
+
+/* Responsive desing */
+
+@media screen and (max-width: 900px){
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav .menu{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.nav-link li{
+    display: block;
+    margin: 0.5em 0;
+}
+
+
+.social-media li:nth-child(1){
+    margin-left: 0;
+}
+
+.social-media{
+    order: 2;
+}
+
+.nav-link{
+    order: 1;
+    padding-top: 1em;
+}
+
+nav .container .menu-btn{
+    display: inline-block;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+nav .container .nav-toggle{
+    height: 10em;
+}
+
+.nav-background{
+    background: #fff;
+}
+
+}
+
+
+
+@media screen and (max-width: 750px){
+    .glass{
+        width: 90%;
+        height: initial;
+        min-height: 30em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+    }
+
+    .h-glass{
+        right: 52%;
+        top: 10%;
+        color: #1f1f1f;
+        background-attachment: initial;
+        background-size: 100% 130%;
+    }
+
+    .h-regular{
+        top: 40%;
+        font-size: 5em;
+    }
+
+    nav .container .menu-btn{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .glass > div {
+    margin-top: 4em;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+    header{
+        height: 700px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .glass > div div:nth-child(1){
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
